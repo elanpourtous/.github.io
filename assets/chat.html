@@ -1,0 +1,62 @@
+<!-- assets/chat.html : FRAGMENT UNIQUEMENT, pas de <html> ni <head> -->
+
+<div class="chat-widget" id="tom-chat">
+  <!-- Bouton flottant -->
+  <button class="chat-toggle"
+          id="tom-chat-toggle"
+          type="button"
+          aria-haspopup="dialog"
+          aria-expanded="false"
+          aria-controls="tom-chat-panel"
+          title="Discuter avec Tom Élan">
+    <span class="chat-toggle-avatar">
+      <img src="assets/ima/tom_avatar.png" alt="Portrait de Tom Élan">
+    </span>
+    <span class="chat-toggle-text">
+      <strong>Tom Élan</strong><br>
+      <span>Besoin d’un coup de main ?</span>
+    </span>
+  </button>
+
+  <!-- Fenêtre de chat -->
+  <section class="chat-panel"
+           id="tom-chat-panel"
+           role="dialog"
+           aria-modal="false"
+           aria-labelledby="tom-chat-title"
+           hidden>
+    <header class="chat-header">
+      <div class="chat-header-main">
+        <img src="assets/ima/tom_avatar.png"
+             alt=""
+             class="chat-header-avatar"
+             aria-hidden="true">
+        <div>
+          <p class="chat-header-title" id="tom-chat-title">Assistant Tom Élan</p>
+          <p class="chat-header-status">En ligne — réponses guidées</p>
+        </div>
+      </div>
+      <button class="chat-header-close"
+              type="button"
+              aria-label="Fermer le chat">×</button>
+    </header>
+
+    <div class="chat-body">
+      <div class="chat-messages" aria-live="polite">
+        <div class="chat-message chat-message--bot">
+          Bonjour, je suis Tom. Dites-moi ce que vous voulez faire :
+          préparer une formation, un test, un aménagement…
+        </div>
+      </div>
+
+      <div class="chat-input">
+        <label for="tom-chat-input" class="sr-only">Votre message</label>
+        <textarea id="tom-chat-input"
+                  rows="2"
+                  placeholder="Écrire un message… (Entrée pour envoyer)"></textarea>
+        <button class="chat-send-btn" type="button">Envoyer</button>
+      </div>
+    </div>
+  </section>
+</div>
+
